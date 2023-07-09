@@ -51,7 +51,7 @@ _start:
 	xor	rsi, rsi		; O_RDONLY
 	syscall
 
-	; Idk what I'm doing
+	; Help, idk what I'm doing
 	push	rax			; Push file descriptor
 	sub	rsp, BUF_SIZE		; Reserver 16 bytes of memory for file content
 
