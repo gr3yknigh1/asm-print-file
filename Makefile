@@ -4,7 +4,7 @@ RM  := rm -rf
 
 SRC := main.asm
 OBJ := main.o
-OUT := main
+OUT := ./bin/main
 
 LD        := ld
 LD_FLAGS  :=
@@ -14,6 +14,7 @@ ASM_FLAGS := -felf64
 all: $(OUT)
 
 $(OUT): $(OBJ)
+	@[ -d ./bin ] || mkdir -p ./bin
 	$(LD) $(LD_FLAGS) $^ -o $@
 
 $(OBJ): $(SRC)
