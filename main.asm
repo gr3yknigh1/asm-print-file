@@ -33,9 +33,6 @@ _start:
 	mov	rsi, L0			; './file.txt'
 	mov	rdx, L1			;  ^^^^^^^^^^ - size
 	mov	rdi, UNIX_FD_STDOUT
-	mov	rsi, msg
-	mov	rdx, ln
-
 	syscall
 
 	; Printing new line
